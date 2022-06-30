@@ -1,0 +1,47 @@
+@import-normalize;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  all: unset;
+}
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url(./utility/fonts/Vazir.woff);
+}
+@font-face {
+  font-family: Vazir;
+  src: url(./utility/fonts/Vazir-Bold.woff);
+  font-weight: bold;
+}
+
+:root {
+  --gray-50: rgb(211, 205, 205);
+  --gray-100: #c9cacc;
+  --gray-200: #acb0ba;
+  --gray-300: #969ba7;
+  --gray-400: #7f8694;
+  --gray-500: #6b7280;
+  --gray-600: #515761;
+  --gray-700: #383c43;
+  --gray-800: #1e2024;
+  --gray-900: #050506;
+  --Violet-50: #f5f3ff;
+  --Violet-100: #ede9fe;
+  --Violet-200: #ddd6fe;
+  --Violet-300: #c4b5fd;
+  --Violet-400: #a78bfa;
+  --Violet-500: #8b5cf6;
+  --Violet-600: #7c3aed;
+  --Violet-700: #6d28d9;
+  --Violet-800: #5b21b6;
+  --Violet-900: #4c1d95;
+}
