@@ -1,30 +1,31 @@
 import { NavLink } from 'react-router-dom';
+import modularClassNamer from '../../utility/functions/modularClassNamer';
 import styles from './Navigation.module.css';
+
+const $ = modularClassNamer(styles);
 
 const Navigation = () => {
   return (
-    <nav className={`${styles['nav']}`}>
-      <ul className={`${styles['nav__list']}`}>
-        <li className={`${styles['nav__item']}`}>
+    <nav className={$`nav`}>
+      <ul className={$`nav__list`}>
+        <li className={$`nav__item`}>
           {' '}
           <NavLink
             to={'/cart'}
             className={({ isActive }) =>
-              isActive ? `${styles['nav__item--active']}` : undefined
+              isActive ? $`nav__item--active` : undefined
             }
-            exact
           >
             <button>Cart</button>
           </NavLink>{' '}
         </li>
-        <li className={`${styles['nav__item']}`}>
+        <li className={$`nav__item`}>
           {' '}
           <NavLink
             to={'/'}
             className={({ isActive }) =>
-              isActive ? `${styles['nav__item--active']}` : undefined
+              isActive ? $`nav__item--active` : undefined
             }
-            exact
           >
             <button>Home</button>
           </NavLink>
