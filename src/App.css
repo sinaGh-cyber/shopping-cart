@@ -1,9 +1,19 @@
 .App {
   text-align: center;
 }
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  width: 100%;
+  position: fixed;
+}
 
 /* WRAPPER */
 .page-wrapper {
+  margin-top: 90px;
+  overflow-x: hidden;
 }
 
 /* BUTTON */
@@ -13,7 +23,6 @@
   cursor: pointer;
   transition: all 0.2s linear;
   box-shadow: 8px 6px 10px -4px var(--Violet-600);
-
 }
 .btn:hover {
   transform: scale(1.02);
