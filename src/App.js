@@ -1,22 +1,24 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Layout from './Layout/Layout';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CartProvider from './providers/CartProvider/CartProvider';
 import routes from './routes';
 
 function App() {
   return (
     <div className="App">
       {' '}
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            {routes.map((route) => {
-              return <Route {...route} />;
-            })}
-          </Routes>
-        </Layout>
-      </BrowserRouter>
+      <Router>
+        <CartProvider>
+          <Layout>
+            <Routes>
+              {routes.map((route) => {
+                return <Route {...route} />;
+              })}
+            </Routes>
+          </Layout>{' '}
+        </CartProvider>
+      </Router>
     </div>
   );
 }
