@@ -8,8 +8,9 @@ export const reducer = (state, { type, payload }) => {
         (item) => item.id === payload.id
       );
       let currentProduct = cartColone[currentProductIndex];
+      console.log(currentProductIndex);
       currentProductIndex >= 0
-        ? (currentProduct = {
+        ? (cartColone[currentProductIndex] = {
             ...currentProduct,
             quantity: currentProduct.quantity + 1,
           })
