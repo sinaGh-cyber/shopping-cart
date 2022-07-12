@@ -1,19 +1,21 @@
 .App {
   text-align: center;
+  height: 100vh;
+  overflow: hidden;
 }
 .layout {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 header {
   width: 100%;
-  position: fixed;
 }
 
 /* WRAPPER */
 .page-wrapper {
-  margin-top: 90px;
   overflow-x: hidden;
+  height: 100%;
 }
 
 .container {
