@@ -3,6 +3,8 @@ import './App.css';
 import Layout from './Layout/Layout';
 import CartProvider from './providers/CartProvider/CartProvider';
 import routes from './routes';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <Router>
         <CartProvider>
           <Layout>
+            <ToastContainer theme="colored" style={{fontSize:'2rem'}}/>
             <Routes>
               {routes.map((route) => {
                 return <Route {...route} />;
