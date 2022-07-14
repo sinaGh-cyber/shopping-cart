@@ -1,16 +1,23 @@
-import { addToCart } from '../../providers/CartProvider/actionCreator';
-import { useCartAction } from '../../providers/CartProvider/CartProvider';
+import {
+  addToCart,
+  removeFromCart,
+} from '../../providers/CartProvider/actionCreator';
+import {
+  useCart,
+  useCartAction,
+} from '../../providers/CartProvider/CartProvider';
 import modularClassNamer from '../../utility/functions/modularClassNamer';
-import { BsCartPlus } from 'react-icons/bs';
+import { BsCartPlus, BsCartCheck } from 'react-icons/bs';
 import styles from './ProductItem.module.css';
 
 const $ = modularClassNamer(styles);
 const ProductItem = ({ product }) => {
   const dispatch = useCartAction();
+  const { cart } = useCart();
 
   const addToCartBtnHandler = () => {
     console.log('dispatch');
-        dispatch(addToCart(product));
+    dispatch(addToCart(product));
   };
 
   return (
@@ -22,12 +29,23 @@ const ProductItem = ({ product }) => {
       <div className={$`info`}>
         <p className={$`info__name`}>{product.name}</p>
         <p className={$`info__price`}>{`${product.price} $`}</p>
-        <button
-          onClick={addToCartBtnHandler}
-          className={'btn  btn--primary btn--icon'}
-        >
-          <BsCartPlus />
-        </button>
+        {cart.some((item) => item.id === product.id) ? (
+          <button
+            onClick={() => {
+              dispatch(removeFromCart(product));
+            }}
+            className={'btn  btn--green btn--icon'}
+          >
+            <BsCartCheck />
+          </button>
+        ) : (
+          <button
+            onClick={addToCartBtnHandler}
+            className={'btn  btn--primary btn--icon'}
+          >
+            <BsCartPlus />
+          </button>
+        )}
       </div>
     </li>
   );
