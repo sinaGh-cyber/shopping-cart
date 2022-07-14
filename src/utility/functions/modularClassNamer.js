@@ -4,7 +4,7 @@ const modularClassNamer = (styleRef) => {
     const className = classArray
       .map((classSrt) => (styleRef[classSrt] ? styleRef[classSrt] : classSrt))
       .toString()
-      .replace(',', ' ');
+      .replaceAll(',', ' ');
     return className;
   };
 };
