@@ -106,28 +106,12 @@
     width: 100%;
   }
 
-  .info__off-price {
-  }
-
-  .info p {
-  }
-
-  .info__price.info__price--off {
-  }
-
   .management {
     flex-direction: row;
     width: 100%;
     height: 25%;
   }
-  .management__btn {
-  }
-  .management__btn:hover {
-  }
-  .management__btn:active {
-  }
-  .management__btn--remove {
-  }
+
 }
 
 @media screen and (max-width: 690px) {
@@ -147,9 +131,6 @@
     flex-direction: column;
   }
 
-  .info__off-price {
-  }
-
   .info p {
     width: 100%;
   }
@@ -163,12 +144,5 @@
     width: 100%;
     height: 25%;
   }
-  .management__btn {
-  }
-  .management__btn:hover {
-  }
-  .management__btn:active {
-  }
-  .management__btn--remove {
-  }
+
 }
