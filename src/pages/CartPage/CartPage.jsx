@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import CartItem from '../../components/CartItem/CartItem';
+import CartSummery from '../../components/CartSummery/CartSummery';
 import { useCart } from '../../providers/CartProvider/CartProvider';
 import modularClassNamer from '../../utility/functions/modularClassNamer';
 import styles from './CartPage.module.css';
@@ -25,13 +27,13 @@ const CartPage = () => {
       <div className={$`cart-wrapper`}>
         <section className={$`product`}>
           {' '}
-          <ul className={$`product__list`} >
-            {shoppingCart.cart.map((product) => (
-              <li className={$`product__item`}  key={product.id}>{product.name}</li>
+          <ul className={$`product__list`}>
+            {shoppingCart.cart.map((productInfo) => (
+              <CartItem key={productInfo.id} productInfo={productInfo} />
             ))}
           </ul>
         </section>
-        <section className={$`cart-summery`}></section>
+        <CartSummery />
       </div>
     </div>
   );
