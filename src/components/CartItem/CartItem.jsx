@@ -1,6 +1,6 @@
 import modularClassNamer from '../../utility/functions/modularClassNamer';
 import styles from './CartItem.module.css';
-import { BsFillTrashFill, BsDash, BsPlus } from 'react-icons/bs';
+import { BsFillTrashFill, BsDash, BsPlus, BsCartXFill } from 'react-icons/bs';
 import { useCartAction } from '../../providers/CartProvider/CartProvider';
 import {
   decrementProductQuantity,
@@ -66,6 +66,9 @@ const CartItem = ({ productInfo }) => {
           <BsPlus />
         </button>
       </div>
+      <button onClick={()=>{dispatch(removeFromCart(productInfo))}} className={$`Product-item__btn btn btn-icon`}>
+        <BsCartXFill />
+      </button>
     </li>
   );
 };
