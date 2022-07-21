@@ -12,14 +12,12 @@ function App() {
       {' '}
       <Router>
         <CartProvider>
-          <Layout>
-            <ToastContainer theme="colored" style={{fontSize:'2rem'}}/>
-            <Routes>
-              {routes.map((route) => {
-                return <Route {...route} />;
-              })}
-            </Routes>
-          </Layout>{' '}
+          <ToastContainer theme="colored" style={{ fontSize: '2rem' }} />
+          <Routes>
+            {routes.map((route) => {
+              return <Route {...route} />;
+            })}
+          </Routes>
         </CartProvider>
       </Router>
     </div>
