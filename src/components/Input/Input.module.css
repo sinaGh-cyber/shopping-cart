@@ -1,0 +1,97 @@
+.input-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.input-wrapper .input-wrapper__field {
+  width: 100%;
+  gap: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.input-wrapper .input-wrapper__field label {
+  width: 30%;
+  text-align: left;
+  letter-spacing: 1.1px;
+  color: var(--Violet-800);
+  font-size: 2rem;
+}
+.input-wrapper .input-wrapper__field input {
+  width: 60%;
+  height: 3rem;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 4rem;
+  border: 2px solid var(--Violet-300);
+  color: var(--Violet-800);
+  font-size: 1.4rem;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border: 3px solid var(--Violet-400);
+}
+
+.input-wrapper .input-wrapper__error {
+  font-size: 1.8rem;
+  color: var(--Violet-500);
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  animation: 3 alternate-reverse 0.1s 0.4s vibrating-text;
+}
+.input-wrapper .input-wrapper__field input.error {
+  background-color: rgba(251, 213, 213, 0.412);
+  animation: 3 alternate-reverse 0.1s 0.4s vibrating-text;
+  border: 2px solid rgb(252, 81, 81);
+}
+@keyframes vibrating-text {
+  0% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translate(-0.5rem);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .input-wrapper {
+    width: 100%;
+  }
+  .input-wrapper .input-wrapper__field input {
+    width: 60%;
+  }
+  .input-wrapper .input-wrapper__field label {
+    font-size: 1.8rem;
+    width: 30%;
+    text-align: left;
+  }
+  .input-wrapper .input-wrapper__error {
+    font-size: 1, 6rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .input-wrapper .input-wrapper__field {
+    flex-direction: column;
+    height: 70%;
+  }
+  .input-wrapper .input-wrapper__field input {
+    width: 95%;
+  }
+  .input-wrapper .input-wrapper__field input.error {
+    animation: none;
+  }
+  .input-wrapper .input-wrapper__field label {
+    width: 95%;
+    font-size: 1.8rem;
+  }
+  .input-wrapper .input-wrapper__error {
+    animation: none;
+    font-size: 1.4rem;
+  }
+}
