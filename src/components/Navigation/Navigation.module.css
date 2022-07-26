@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--Violet-100);
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
 }
 .nav__list {
   display: flex;
@@ -10,25 +10,49 @@
   align-items: center;
   text-decoration: none;
   list-style: none;
+  color: var(--Violet-800);
+  height: 100%;
 }
 .nav__item {
   margin-left: 2rem;
+  font-size: 1.6rem;
 }
 .nav__item button {
-  border: 1px solid var(--Violet-800);
-  background-color: var(--Violet-400);
-  color: var(--Violet-50);
+  /* border: 1px solid var(--Violet-800); */
+  display: block;
+  background-color: transparent;
+  color: var(--Violet-900);
+  height: 6rem;
+  width: 8rem;
   font-family: 'Vazir';
-  padding: 1rem 3rem;
-  border-radius: 8px;
-  font-size: 1.5rem;
+  /* padding: 1rem 3rem; */
+  border: none;
+  font-size: 2.6rem;
   cursor: pointer;
   transition: all 0.2s linear;
 }
 
 .nav__item button:hover,
-.nav__item--active button{
-  border: 1px solid var(--Violet-900);
+.nav__item--active button {
   background-color: var(--Violet-50);
   color: var(--Violet-900);
+}
+
+.cart-navigation-btn {
+  position: relative;
+}
+
+.cart-counter-badge {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: var(--Violet-800);
+  color: var(--Violet-50);
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  align-items: center;
 }
