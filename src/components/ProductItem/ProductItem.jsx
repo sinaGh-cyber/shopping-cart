@@ -1,11 +1,11 @@
 import {
   addToCart,
   removeFromCart,
-} from '../../providers/CartProvider/actionCreator';
+} from '../../providers/Cart/actionCreator';
 import {
   useCart,
   useCartAction,
-} from '../../providers/CartProvider/CartProvider';
+} from '../../providers/Cart/CartProvider';
 import modularClassNamer from '../../utility/functions/modularClassNamer';
 import { BsCartPlus, BsCartCheck } from 'react-icons/bs';
 import styles from './ProductItem.module.css';
@@ -16,7 +16,6 @@ const ProductItem = ({ product }) => {
   const { cart } = useCart();
 
   const addToCartBtnHandler = () => {
-    console.log('dispatch');
     dispatch(addToCart(product));
   };
 

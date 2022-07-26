@@ -1,12 +1,12 @@
 import modularClassNamer from '../../utility/functions/modularClassNamer';
 import styles from './CartItem.module.css';
 import { BsFillTrashFill, BsDash, BsPlus, BsCartXFill } from 'react-icons/bs';
-import { useCartAction } from '../../providers/CartProvider/CartProvider';
+import { useCartAction } from '../../providers/Cart/CartProvider';
 import {
   decrementProductQuantity,
   incrementProductQuantity,
   removeFromCart,
-} from '../../providers/CartProvider/actionCreator';
+} from '../../providers/Cart/actionCreator';
 
 const $ = modularClassNamer(styles);
 

@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import CartItem from '../../components/CartItem/CartItem';
 import CartSummery from '../../components/CartSummery/CartSummery';
 import Layout from '../../Layout/Layout';
-import { useCart } from '../../providers/CartProvider/CartProvider';
+import { useCart } from '../../providers/Cart/CartProvider';
 import modularClassNamer from '../../utility/functions/modularClassNamer';
 import styles from './CartPage.module.css';
 
