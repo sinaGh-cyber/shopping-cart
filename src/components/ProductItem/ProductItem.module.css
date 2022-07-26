@@ -1,7 +1,7 @@
 .Product-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--Violet-50);
   border-radius: 8px;
@@ -9,12 +9,13 @@
 }
 .Product-item__image {
   height: 70%;
+  overflow: hidden;
   display: flex;
 }
 .Product-item__image img {
   margin: auto;
   width: 70%;
-  object-fit: cover;
+  height: auto;
   border-radius: 8px;
 }
 .info {
@@ -31,4 +32,28 @@
 }
 .info__price {
   white-space: nowrap;
+}
+
+@media screen and (max-width: 400px) {
+  .Product-item {
+    justify-content: space-evenly;
+    height: 350px;
+  }
+  .Product-item__image {
+    height: 45%;
+    width: 100%;
+  }
+  .Product-item__image img {
+    height: 100%;
+    width: auto;
+  }
+  .info {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+  }
+  .info__name,
+  .info__price {
+    padding: 1rem 1rem;
+  }
 }
