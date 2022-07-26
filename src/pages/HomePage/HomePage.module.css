@@ -4,6 +4,11 @@
   gap: 4rem;
   max-width: 1170px;
   width: 90vw;
-  overflow: auto;
-  
+  overflow: hidden;
+}
+
+@media screen and (max-width: 400px) {
+  .Products {
+    grid-template-columns: 1fr;
+  }
 }
