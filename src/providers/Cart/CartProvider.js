@@ -1,12 +1,27 @@
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useEffect, useReducer } from 'react';
+import { GET_CART_DATA_FROM_LOCAL_STORAGE } from './actionTypes';
 import { initState } from './initState';
 import { reducer } from './reducer';
 
+const cartKey = 'CART_KEY';
 const CartContext = createContext();
 const CartActionContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cart, dispatch] = useReducer(reducer, initState);
+
+  useEffect(() => {
+    const cartData = JSON.parse(localStorage.getItem(cartKey));
+    if (cartData) {
+      dispatch({ type: GET_CART_DATA_FROM_LOCAL_STORAGE, payload: cartData });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (cart.cart.length) {
+      localStorage.setItem(cartKey, JSON.stringify(cart));
+    }
+  }, [cart]);
 
   return (
     <CartContext.Provider value={cart}>
