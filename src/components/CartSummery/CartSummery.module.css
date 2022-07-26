@@ -1,0 +1,109 @@
+.cart-summery {
+  width: 35%;
+  background-color: red;
+  justify-content: stretch;
+  align-items: stretch;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--Violet-100);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cart-summery__coupon-box {
+  color: var(--Violet-800);
+  min-height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-summery__coupon-box input {
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 2px solid var(--Violet-300);
+  box-shadow: 8px 6px 10px -4px var(--Violet-600);
+}
+
+.cart-summery__coupon-box input:focus {
+  outline: none;
+  border: 3px solid var(--Violet-400);
+}
+
+.cart-summery__payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20%;
+  width: 100%;
+}
+
+.price__title {
+  color: var(--Violet-800);
+}
+
+.price__amount {
+  color: var(--Violet-700);
+}
+
+.price {
+  display: flex;
+  font-size: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.price--rale .price__amount {
+  text-decoration: line-through;
+}
+.price.price--total {
+  border-top: 2px solid var(--Violet-700);
+  padding-top: 1.5rem;
+}
+.cart-summery__checkout-btn {
+  width: 100%;
+  font-size: 2rem;
+}
+.cart-summery a {
+  width: 96%;
+}
+
+@media screen and (max-width: 800px) {
+  .cart-summery {
+    padding: 0.7rem;
+    width: 100%;
+    gap: 0;
+    overflow: hidden;
+    max-height: 25rem;
+    min-height: 20rem;
+  }
+  .cart-summery__coupon-box {
+    width: 100%;
+    min-height: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .cart-summery__payment {
+    min-height: 12rem;
+  }
+  .cart-summery__checkout-btn {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .cart-summery__coupon-box {
+    flex-direction: column;
+  }
+  .cart-summery {
+    max-height: 26rem;
+  }
+}
