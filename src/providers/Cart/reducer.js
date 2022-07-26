@@ -1,6 +1,7 @@
 import {
   ADD_TO_CART,
   DECREMENT_PRODUCT_QUANTITY,
+  GET_CART_DATA_FROM_LOCAL_STORAGE,
   INCREMENT_PRODUCT_QUANTITY,
   REMOVE_FROM_CART,
 } from './actionTypes';
@@ -8,6 +9,10 @@ import { toast } from 'react-toastify';
 
 export const reducer = (state, { type, payload }) => {
   switch (type) {
+    case GET_CART_DATA_FROM_LOCAL_STORAGE: {
+      return payload;
+    }
+
     case ADD_TO_CART: {
       const cartColone = [...state.cart];
       const currentProductIndex = state.cart.findIndex(
