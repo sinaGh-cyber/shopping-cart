@@ -33,7 +33,7 @@ const Checkout = () => {
           <p>{auth.name}</p>
           <p>{auth.email}</p>
           <p>{auth.phoneNumber}</p>
-          <button className={$`btn btn--primary btn--icon`} >pay with credit card --> </button>
+          <button className={$`btn btn--primary btn--icon`} >pay with credit card --&gt; </button>
         </div>
       </section>
     </Layout>
